@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "menu menu menu"
+          "sidebar slider slider"
+          "sidebar sp1 sp2"
+          "footer footer footer";
+        grid-template-columns: 2fr 3fr 3fr;
+        grid-template-rows: 80px 60px 300px 200px 60px;
+        padding: 10px;
+      }
+      .header {
+        grid-area: header;
+        background: #f5e1c3;
+        text-align: center;
+        padding: 20px;
+      }
+      .menu {
+        grid-area: menu;
+        background: #2f4f4f;
+        color: white;
+        text-align: center;
+        padding: 15px;
+      }
+      .sidebar {
+        grid-area: sidebar;
+        background: purple;
+        padding: 10px;
+        padding-right: 100px;
+      }
+      .slider {
+        grid-area: slider;
+        background: lightcoral;
+        padding: 20px;
+        text-align: center;
+      }
+      .sp1 {
+        grid-area: sp1;
+        background: steelblue;
+        padding: 20px;
+        text-align: center;
+      }
+      .sp2 {
+        grid-area: sp2;
+        background: steelblue;
+        padding: 20px;
+        text-align: center;
+      }
+      .footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #f5e1c3;
+        padding: 10px;
+      }
+      .footer div {
+        flex: 1;
+        text-align: center;
+        border: 1px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">header</div>
+      <div class="menu">menu ngang</div>
+      <div class="sidebar">slide bar</div>
+      <div class="slider">slider</div>
+      <div class="sp1">sp nổi bật 1</div>
+      <div class="sp2">sp nổi bật 2</div>
+      <div class="footer">
+        <div>f1</div>
+        <div>f2</div>
+        <div>f3</div>
+        <div>f4</div>
+      </div>
+    </div>
+  </body>
+</html>

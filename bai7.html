@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 7</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "sidebar content"
+          "footer footer";
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 100px 80px 80px;
+        row-gap: 10px;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        background-color: white;
+      }
+      .grid-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+      }
+      .header {
+        grid-area: header;
+        background-color: yellow;
+      }
+      .sidebar {
+        grid-area: sidebar;
+        background-color: rgb(176, 146, 87);
+      }
+      .content {
+        grid-area: content;
+        background-color: rgb(211, 114, 205);
+      }
+      .footer {
+        grid-area: footer;
+        background-color: rgb(56, 45, 45);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item header">Header</div>
+      <div class="grid-item sidebar">Sidebar</div>
+      <div class="grid-item content">Content</div>
+      <div class="grid-item footer">Footer</div>
+    </div>
+  </body>
+</html>

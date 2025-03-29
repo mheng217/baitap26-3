@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 10</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: white;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 10px;
+        padding: 10px;
+      }
+      .header {
+        grid-column: 1 / 3;
+        background: #343a40;
+        color: white;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .nav-menu {
+        display: flex;
+        gap: 15px;
+      }
+      .nav-menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      .sidebar {
+        background: white;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      .sidebar a {
+        display: block;
+        color: blue;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        border: 1px solid #ddd;
+      }
+      .sidebar a:hover {
+        background-color: #c6c6c6;
+      }
+      .carousel {
+        grid-column: 2 / 3;
+        background: white;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      .carousel img {
+        width: 100%;
+        border-radius: 5px;
+      }
+      .products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        grid-column: 2 / 3;
+        padding: 10px;
+      }
+      .card {
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+      .footer {
+        grid-column: 1 / 3;
+        background: #343a40;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .rating-background {
+        background-color: #f0f0f0;
+        padding: 5px;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .rating {
+        display: inline-block;
+        font-size: 18px;
+        color: black;
+      }
+      h3 {
+        color: blue;
+      }
+      .nav-menu a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #6e6f71;
+      }
+      .nav-menu a:hover {
+        text-decoration: none;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <span>Nền Tảng</span>
+        <div class="nav-menu">
+          <a href="#" style="color: white">Trang chủ</a>
+          <a href="#">Giới thiệu</a>
+          <a href="#">Dịch vụ</a>
+          <a href="#">Liên hệ</a>
+        </div>
+      </div>
+      <div class="sidebar">
+        <h2>NeTa Shop</h2>
+        <a href="#" style="color: blue">Category 1</a><br />
+        <a href="#" style="color: blue">Category 2</a><br />
+        <a href="#" style="color: blue">Category 3</a><br />
+      </div>
+      <div class="carousel">
+        <img
+          src="https://www.sailingeurope.com/blog/wp-content/uploads/2014/03/M_SaladWithFeta.jpg"
+          alt="Carousel Image"
+          height="400px"
+        />
+      </div>
+      <div class="products">
+        <div class="card">
+          <img
+            src="https://www.tasteofhome.com/wp-content/uploads/2018/06/shutterstock_604314275.jpg?w=1200"
+            alt="Product 1"
+          />
+          <h3>Sản phẩm One</h3>
+          <p><strong>$24.99</strong></p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+            quae. Maxime quas nesciunt
+          </p>
+          <div class="rating-background">
+            <div class="rating">★★★★☆</div>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://www.tasteofhome.com/wp-content/uploads/2018/06/shutterstock_604314275.jpg?w=1200"
+            alt="Product 2"
+          />
+          <h3>Sản phẩm Two</h3>
+          <p><strong>$24.99</strong></p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+            quae. Maxime quas nesciunt
+          </p>
+          <div class="rating-background">
+            <div class="rating">★★★★☆</div>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://www.tasteofhome.com/wp-content/uploads/2018/06/shutterstock_604314275.jpg?w=1200"
+            alt="Product 3"
+          />
+          <h3>Sản phẩm Three</h3>
+          <p><strong>$24.99</strong></p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+            quae. Maxime quas nesciunt
+          </p>
+          <div class="rating-background">
+            <div class="rating">★★★★☆</div>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://www.tasteofhome.com/wp-content/uploads/2018/06/shutterstock_604314275.jpg?w=1200"
+            alt="Product 4"
+          />
+          <h3>Sản phẩm Four</h3>
+          <p><strong>$24.99</strong></p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+            quae. Maxime quas nesciunt
+          </p>
+          <div class="rating-background">
+            <div class="rating">★★★★☆</div>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://www.tasteofhome.com/wp-content/uploads/2018/06/shutterstock_604314275.jpg?w=1200"
+            alt="Product 5"
+          />
+          <h3>Sản phẩm Five</h3>
+          <p><strong>$24.99</strong></p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+            quae. Maxime quas nesciunt
+          </p>
+          <div class="rating-background">
+            <div class="rating">★★★★☆</div>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://www.tasteofhome.com/wp-content/uploads/2018/06/shutterstock_604314275.jpg?w=1200"
+            alt="Product 6"
+          />
+          <h3>Sản phẩm Six</h3>
+          <p><strong>$24.99</strong></p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+            quae. Maxime quas nesciunt
+          </p>
+          <div class="rating-background">
+            <div class="rating">★★★★☆</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        Bản quyền bởi ©
+        <a href="#" style="text-decoration: none">NeTa Shop</a> © 2019
+      </div>
+    </div>
+  </body>
+</html>
